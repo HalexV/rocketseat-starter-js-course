@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercicio 1</title>
+</head>
+<body>
+  <div>
+    <button id="redSquareGenerator">Generate Red Square</button>
+  </div>
+
+  <div id="redSquares">
+
+  </div>
+  
+  
+  <script>
+    var redSquareGeneratorElement = document.querySelector('div button#redSquareGenerator');
+
+    var redSquaresElement = document.querySelector('div#redSquares');
+
+    redSquareGeneratorElement.onclick = function () {
+      var newRedSquare = document.createElement('div'); //Criando uma div
+
+      //Estilizar a div
+      newRedSquare.style.width = '100px';
+      newRedSquare.style.height = '100px';
+      newRedSquare.style.backgroundColor = 'red';
+      newRedSquare.style.display = 'inline-block';
+
+      //Adicionar a div ao pai div#redSquares
+      redSquaresElement.appendChild(newRedSquare);
+    };
+  </script>
+</body>
+</html>

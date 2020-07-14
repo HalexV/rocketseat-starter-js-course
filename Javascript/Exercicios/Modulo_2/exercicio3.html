@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercício 3</title>
+</head>
+<body>
+  
+
+
+
+
+  <script>
+    var nomes = ["Diego", "Gabriel", "Lucas"];
+
+    var uListElement = document.createElement('ul');
+
+    for (const iterator of nomes) {
+      var liElement = document.createElement('li');
+      var textElement = document.createTextNode(iterator);
+
+      liElement.appendChild(textElement);
+
+      uListElement.appendChild(liElement);
+    }
+
+    document.body.appendChild(uListElement);
+  </script>
+</body>
+</html>

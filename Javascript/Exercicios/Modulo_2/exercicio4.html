@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercício 4</title>
+</head>
+<body>
+  
+  <input type="text" name="nome">
+  <button onClick="adicionar()">Adicionar</button>  
+
+
+
+
+  <script>
+    var nomes = ["Diego", "Gabriel", "Lucas"];
+
+    var uListElement = document.createElement('ul');
+
+    for (const iterator of nomes) {
+      var liElement = document.createElement('li');
+      var textElement = document.createTextNode(iterator);
+
+      liElement.appendChild(textElement);
+
+      uListElement.appendChild(liElement);
+    }
+
+    document.body.appendChild(uListElement);
+
+    function adicionar() {
+      var inputField = document.querySelector('input');
+      var inputValue = inputField.value;
+
+      if (inputValue !== '') {
+
+        inputField.value = '';
+
+        var liElement = document.createElement('li');
+        var textElement = document.createTextNode(inputValue);
+
+        liElement.appendChild(textElement);
+
+        uListElement.appendChild(liElement);      
+      }
+
+
+    }
+
+  </script>
+</body>
+</html>
